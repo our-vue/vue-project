@@ -5,4 +5,15 @@ html,body {
 }
 body {
     font-size: 0.14rem;
+    background: #f2f2f2;
+}
+p,ul,li,ol,h1,h2,h3,h4,h5,h6{
+    margin:0;
+    padding:0;
+}
+*{
+    box-sizing: border-box;
+}
+li{
+    list-style: none;
 }
