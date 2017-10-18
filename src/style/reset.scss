@@ -1,8 +1,11 @@
-html,body {
+html,body,#app{
     height: 100%;
     margin: 0;
     padding: 0;
 }
 body {
     font-size: 0.14rem;
+}
+a{
+    text-decoration: none;
 }

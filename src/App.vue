@@ -13,5 +13,8 @@ export default {
 <style lang="scss">
 
 @import './style/reset.scss';
+#app{
+	background: #f8f8f8;
+}
 
 </style>
