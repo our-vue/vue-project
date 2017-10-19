@@ -1,4 +1,4 @@
-html,body,#app{
+html,body {
     height: 100%;
     margin: 0;
     padding: 0;
@@ -6,6 +6,19 @@ html,body,#app{
 body {
     font-size: 0.14rem;
 }
-a{
+a {
     text-decoration: none;
 }
+img {
+    padding: 0; margin: 0;
+    border: none;
+    vertical-align: middle;
+}
+h1,h2,h3,h4,h5,h6,p,ul,li {
+    margin: 0;
+    padding: 0;
+}
+ul li {
+    list-style: none;
+}
+
