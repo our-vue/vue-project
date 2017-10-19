@@ -11,7 +11,8 @@ const state = {
 	sort_left:[],
 	sort_change:[],
 	parentInfo:{},
-	name:''
+	name:'',
+	username:''
 }
 
 const mutations = {
@@ -31,7 +32,10 @@ const mutations = {
 		})
 		state.sort_change=obj
 		state.parentInfo=arr			
-	}
+	},
+	changeUsername(state,userID) {
+        state.username = userID
+    }
 }
 
 const getters={
