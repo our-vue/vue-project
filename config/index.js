@@ -32,7 +32,7 @@ module.exports = {
     assetsSubDirectory: 'static',
     assetsPublicPath: '/',
     proxyTable: {
-    	'/wochu':{
+      '/wochu':{
     		target:'http://api5.wochu.cn/',
     		changeOrigin:true,
     		pathRewrite:{

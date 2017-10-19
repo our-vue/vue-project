@@ -6,13 +6,12 @@
 </template>
 
 <script>
-	import AppFooter from '../common/AppFooter'
+import AppFooter from '../common/AppFooter'
 export default {
   name: 'AppCars',
   components:{
   	AppFooter
   }
-
 }
 </script>
 
