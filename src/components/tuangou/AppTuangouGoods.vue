@@ -6,7 +6,7 @@
               <img :src="good.hotSaleImage[0].URL" alt="">
             </a>          
             <p class="goods-title">{{good.product_title}}</p>
-            <p class="goods-info">{{product_describe}}</p>
+            <p class="goods-info">{{good.product_describe}}</p>
             <div class="goods-price">
               <span class="price">&yen;{{good.discount_price}}<span class="yuan">/&yen;{{good.market_price}}</span><span class="tuan"> {{good.parter_number}}人团</span></span>
               <a href="">去开团</a>

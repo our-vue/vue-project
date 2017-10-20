@@ -1,18 +1,32 @@
 <template>
 	<div class="main-nav">
-		<div class="nav-item" v-for="(nav,i) in navData" :key='i' >
-			<img :src="nav.imgUrl" />
+		<div v-if="navData.length!=0">
+			<div class="nav-item" @click='goto("list")'>
+				<img :src="navData[0].imgUrl" />
+			</div>
+			<div class="nav-item" @click='goto("tuangou")'>
+				<img :src="navData[1].imgUrl" />
+			</div>
+			<div class="nav-item" @click='goto'>
+				<img :src="navData[2].imgUrl" />
+			</div>
+			<div class="nav-item" @click='goto'>
+				<img :src="navData[3].imgUrl" />
+			</div>
 		</div>
 	</div>
 </template>
 
 <script>
+	import router from '../../router'
 	export default {
 		name:'MainNav',
-		props:['navData'],
-		data(){
-			return {
-				
+		props:['navData'],		
+		methods:{
+			
+			goto(rout){
+		
+				router.push(rout)
 			}
 		}
 	}

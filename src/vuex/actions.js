@@ -39,7 +39,8 @@ const actions = {
 			}
 		}).then((res)=>{
 			if(res.data.userID) {
-                router.push("/")
+				commit('changeUsername',res.data.userID)
+                router.push("/mine")
             }else {
 				 Toast({
                   message:"登录失败",

@@ -39,7 +39,7 @@ export default {
   methods:{
   	getData(){
   		let that=this;
-			axios.get('http://localhost:3000/wochu/client/v1/app/layoutamend?parameters=%7B%22version%22%3A%2210.0.0%22%2C%22source%22%3A%22H%22%7D')
+			axios.get('http://api5.wochu.cn/client/v1/app/layoutamend?parameters=%7B%22version%22%3A%2210.0.0%22%2C%22source%22%3A%22H%22%7D')
 				.then((res)=>{
 					//console.log(res.data.data.recommendedContent[0].items)
 					that.lunboData=res.data.data.carousel;
@@ -67,7 +67,6 @@ export default {
 <style scoped>
 .app-main{
 	width:100%;
-
 	padding-top:.45rem;
 	padding-bottom: .45rem;
 	

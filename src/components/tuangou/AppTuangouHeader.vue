@@ -1,18 +1,24 @@
 <template>
   <div class="app-tuangou-header">
         <div class="header">
-          <span class="iconfont icon-common-fanhui-copy"></span>
+          <span class="iconfont icon-common-fanhui-copy" @click="back"></span>
           <h5>团购</h5>
         </div>
   </div>
 </template>
 <script>
+	import router from '../../router'
 export default {
   name: "AppTuangouHeader",
   data() {
       return {
 
       }
+  },
+  methods:{
+  	back(){
+  		router.push('/')
+  	}
   }
 }
 </script>

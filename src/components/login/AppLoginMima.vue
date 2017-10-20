@@ -26,7 +26,9 @@ export default {
       router.push("password")
     },
     submit() {
+    	
         this.login({username:this.tellinfo,password:this.yazhen})
+        localStorage.username=this.tellinfo
     }
   }
    

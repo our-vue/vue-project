@@ -10,7 +10,9 @@ export default {
     data() {
         return {
             imgs:[],
-            loading: true
+            loading: true,
+            aid:null
+            
         }
     },
     methods: {
@@ -20,11 +22,11 @@ export default {
                 axios.get("http://wmall.wochu.cn/client/v1/goods/activityTemplate",{
                     params: {
                         parameters: {
-                            aTId:391
+                            aTId:that.aid
                         }
                     }
                 }).then((res)=> {
-                    console.log(res.data.data.areaList)
+                    //console.log(res.data.data.areaList)
                     that.imgs = res.data.data.areaList
                 })
             }
@@ -32,6 +34,7 @@ export default {
         }
     },
     mounted() {
+    	this.aid=this.$route.params.id
         this.getImages()
     }
   

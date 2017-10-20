@@ -34,7 +34,8 @@ const mutations = {
 		state.parentInfo=arr			
 	},
 	changeUsername(state,userID) {
-        state.username = userID
+        state.username = userID;
+        
     }
 }
 

@@ -30,7 +30,7 @@ export default {
     getData() {
         let that = this
         if(this.loading){
-            this.goods=[]
+           
             axios.get("http://tg.wochu.cn/client/v1/groupBuy/HotSaleList", {
                 params: {
                     parameters: {
@@ -43,7 +43,7 @@ export default {
                     this.loading = false           
                     return false;
                 }
-                console.log(res.data.data.items)            
+                //console.log(res.data.data.items)            
                 that.goods =that.goods.concat(res.data.data.items)         
                 that.pageIndex++;  
             })

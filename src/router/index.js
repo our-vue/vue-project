@@ -10,7 +10,7 @@ import AppPassword from "@/components/login/AppPassword"
 import AppList from "@/components/list/AppList"
 import AppTuangou from "@/components/tuangou/AppTuangou"
 import AppActivity from "@/components/activity/AppActivity"
-
+import AppDetail from "@/components/detail/AppDetail"
 
 Vue.use(Router)
 
@@ -63,9 +63,14 @@ export default new Router({
       component: AppTuangou
     },
     {
-      path: '/activity',
+      path: '/activity/:id',
       name: "activity",
       component: AppActivity
+    },
+    {
+    	path:'/detail/:id',
+    	name:'detail',
+    	component:AppDetail
     }
   ]
 })

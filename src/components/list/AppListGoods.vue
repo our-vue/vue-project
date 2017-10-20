@@ -32,6 +32,7 @@ export default {
 <style scoped lang="scss">
 .app-list-goods {
   width: 100%;
+  background: white;
   .goods-list {
     width: 100%;
     display: flex;

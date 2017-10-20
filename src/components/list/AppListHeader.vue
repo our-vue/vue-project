@@ -1,25 +1,33 @@
 <template>
   <div class="app-list-header">
         <div class="header">
-          <span class="iconfont icon-common-fanhui-copy"></span>
-          <h5>本周特惠专区产品</h5>
+          <span class="iconfont icon-common-fanhui-copy" @click="back"></span>
+          <h5 v-text='content'></h5>
         </div>
-         <h6>本周特惠专区产品</h6>
+         <h6 v-text='content'></h6>
   </div>
 </template>
 <script>
+	import router from '../../router'
 export default {
   name: "AppListHeader",
+  props:['content'],
   data() {
       return {
 
       }
+  },
+  methods:{
+  	back(){
+  		router.push('/')
+  	}
   }
 }
 </script>
 <style scoped lang="scss">
 .app-list-header {
   width: 100%;
+  background: white;
   .header {
     width: 100%;
     height: 0.5rem;

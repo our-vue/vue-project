@@ -2,12 +2,12 @@
 	<div class="main-banner-swiper swiper-container">
 		
 	        <div  class="swiper-wrapper">
-	        	<div v-for="(good,i) in item.items" :key='i' class="advice-group swiper-slide">
+	        	<div v-for="(good,i) in item.items" :key='i' class="advice-group swiper-slide" @click="goto(good)">
 	        		<img class='group-img' :src="good.imgUrl" />
 	        		<div class="group-title">{{good.posDes}}</div>
 	        		<div class="add-cart">
 	        			<span>￥{{good.marketPrice}}</span>
-	        			<img src='../../../static/imgs/wochuLogo.png' />
+	        			<img src='../../../static/imgs/add.png' />
 	        		</div>
 	        		<div class="now-price">
 	        			￥{{good.price}}
@@ -21,6 +21,7 @@
 </template>
 
 <script>
+	import router from '../../router'
 	import Swiper from '../../../static/swiper-3.4.2.min.js'
 	let swiper;
 	export default{
@@ -32,9 +33,13 @@
 			}
 		},
 		methods:{
-			
+			goto(good){
+				console.log(good)
+				router.push({name:'detail',params:{id:good.source}})
+			}
 		},
 		mounted(){
+			
 			swiper = new Swiper('.main-banner-swiper', {		        
 		        slidesPerView: 3,
 		        spaceBetween: 30

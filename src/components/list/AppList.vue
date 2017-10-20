@@ -1,6 +1,6 @@
 <template>
   <div class="app-list">
-        <app-list-header></app-list-header>
+        <app-list-header :content='tagname'></app-list-header>
         <div  v-infinite-scroll="getData"
   infinite-scroll-distance="10">
             <app-list-goods :goods="goods"></app-list-goods>
@@ -18,9 +18,10 @@ import { InfiniteScroll  } from 'mint-ui';
 
 export default {
   name: "AppList",
+
   data() {
       return {
-          tagname: "本周特惠专区",
+            tagname:'本周特惠专区',
             orderId: "0",
             pageSize: 6,
             pageIndex: 1,
@@ -48,7 +49,7 @@ export default {
                     that.msg = "没有更多数据了！"
                     return false;
                 }
-                console.log(res.data.data.items)            
+               // console.log(res.data.data.items)            
                 that.goods =that.goods.concat(res.data.data.items)         
                 that.pageIndex++;  
             })

@@ -2,7 +2,7 @@
 	<div class="main-lunbo swiper-container">
 		
 		    <div class="swiper-wrapper">
-		        <div v-for="item in lunboData" class="swiper-slide">
+		        <div v-for="item in lunboData" class="swiper-slide" @click="goToAdv(item.action.data.target.split('='))">
 		        	<img :src="item.picUrl">
 		        </div>
 
@@ -15,6 +15,7 @@
 </template>
 
 <script>
+	import router from '../../router'
 	import Swiper from '../../../static/swiper-3.4.2.min.js'
 	let mySwiper;
 	export default {
@@ -25,10 +26,18 @@
 				mySwiper:''
 			}
 		},
+		methods:{
+			goToAdv(aid){
+				//console.log(aid[1])
+				router.push({name:'activity',params:{id:aid[1]}})
+			}
+		},
 		mounted(){
-			//console.log(this)
+			//let activityId=this.lunboData[0].action.data.target.split('=')
+			//console.log(activityId)
 			mySwiper = new Swiper ('.main-lunbo', {
 				autoplay : 3000,
+				autoplayDisableOnInteraction : false,
 			    loop: true,			    
 			    // 如果需要分页器
 			    pagination: '.swiper-pagination',			    
